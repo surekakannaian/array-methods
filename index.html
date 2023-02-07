@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--concat()-->
+        <h1 class="text-white bg-dark text-center">ARRAY METHODS</h1>
+        <h3>1.concat()</h3>
+        <p>The concat() method concatenates (joins) two or more arrays:</p>
+        <p>const arr1 = ["Cecilie", "Lone"]; <br>
+            const arr2 = ["Emil", "Tobias", "Linus"];<br>
+            const arr3 = arr1.concat(arr2);</p>
+        <button class="btn btn-success" onclick="concat()">Try it</button>
+        <p id="demo1"></p>
+        <!--copywithin-->
+        <h3>2.copyWithin(target,start,end)</h3>
+        <p>copyWithin() copies array elements to another position in an array, overwriting existing values:</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="copywithin()">copyWihin(2,0)</button>
+        <p id="demo2"></p>
+        <!--entries-->
+        <h3>3.entries()</h3>
+        <p>entries() returns an Array Iterator object with key/value pairs:</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            const f = fruits.entries();</p>
+        <button class="btn btn-success" onclick="entries()">Try it</button>
+        <p id="demo3"></p>
+        <!--every()-->
+        <h3>4.every(funcion(current value,index,arr))</h3>
+        <p>every() returns true if all elements in an array pass a test (provided as a function).</p>
+        <p>const ages = [32, 33, 16, 40];</p>
+        <button class="btn btn-success" onclick="every()">check ages are > 18</button>
+        <p id="demo4"></p>
+        <!--fill-->
+        <h3>5.fill(value,start,end)</h3>
+        <p>fill() fills specified elements in an array with a value.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p>Fill all array elements with "Kiwi":</p>
+        <button class="btn btn-success" onclick="fill()">Try it</button>
+        <p id="demo5"></p>
+        <!--filter-->
+        <h3>6.filter(funcion(current value,index,arr))</h3>
+        <p>The filter() method creates a new array filled with elements that pass a test provided by a function.</p>
+        <p>Get every element in the array that has a value of 18 or more:</p>
+        <p>const ages = [32, 33, 16, 40];</p>
+        <button class="btn btn-success" onclick="filter()">Try it</button>
+        <p id="demo6"></p>
+        <!--find-->
+        <h3>7.find(funcion(current value,index,arr))</h3>
+        <p>The find() method returns the value of the first element that passes a test.</p>
+        <p>Find the value of the first element with a value above 18:</p>
+        <p>const ages = [3, 19, 18, 20];</p>
+        <button class="btn btn-success" onclick="find()">Try it</button>
+        <p id="demo7"></p>
+        <!--findindex-->
+        <h3>8.findIndex(funcion(current value,index,arr))</h3>
+        <p>The find() method returns the index of the first element that passes a test.</p>
+        <p>Find the value of the first element with a value above 18:</p>
+        <p>const ages = [3, 19, 18, 20];</p>
+        <button class="btn btn-success" onclick="findindex()">Try it</button>
+        <p id="demo8"></p>
+        <!--findindex-->
+        <h3>9.forEach(funcion(current value,index,arr))</h3>
+        <p>The forEach() method calls a function for each element in an array.</p>
+        <p>Multiply the value of each element with 10:</p>
+        <p>const ages = [3, 19, 18, 20];</p>
+        <button class="btn btn-success" onclick="foreach()">Try it</button>
+        <p id="demo9"></p>
+        <!--form-->
+        <h3>10.Array.from(object)</h3>
+        <p>The Array.from() method returns an array from any iterable object.</p>
+        <p>Create an array from a string:</p>
+        <p>let text = "ABCDEFG";<br>
+            const myArr = Array.from(text);</p>
+        <button class="btn btn-success" onclick="formarray()">Try it</button>
+        <p id="demo10"></p>
+        <!--includes-->
+        <h3>11.includes(element)</h3>
+        <p>The includes() method returns true if an array contains a specified value.
+            <br>
+            The includes() method returns false if the value is not found.
+        </p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="includes()">include('Mango')</button>
+        <p id="demo11"></p>
+        <!--indexof-->
+        <h3>12.indexOf(item,start)</h3>
+        <p>The indexOf() method returns the first index (position) of a specified. <br> The
+            indexOf() method returns -1 if the value is not found.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="indexof()">indexof('Apple')</button>
+        <p id="demo12"></p>
+        <!--isarray-->
+        <h3>13.isArray(obj)</h3>
+        <p>The isArray() method returns true if an object is an array, otherwise false.</p>
+        <p>let text = "W3Schools";</p>
+        <button class="btn btn-success" onclick="isarray()">isArray(text)</button>
+        <p id="demo13"></p>
+        <!--join-->
+        <h3>14.join(seperator)</h3>
+        <p>The join() method returns an array as a string.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="join()">join()</button>
+        <p id="demo14"></p>
+        <!--keys-->
+        <h3>15.keys()</h3>
+        <p>keys() returns an Array Iterator object with the keys of an array:</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="keys()">fruits.keys()</button>
+        <p id="demo15"></p>
+        <!--lastindex-->
+        <h3>16.lastIndexOf()</h3>
+        <p>he lastIndexOf() method returns the last index (position) of a specified value. <br>
+            The lastIndexOf() method returns -1 if the value is not found.</p>
+        <p>const fruits = ["Orange","Apple","Mango","Apple","Banana","Apple"]; <br>
+            let index = fruits.lastIndexOf("Apple");
+        </p>
+        <button class="btn btn-success" onclick="lastindex()">click</button>
+        <p id="demo16"></p>
+        <!--length-->
+        <h3>17.length</h3>
+        <p>The length property sets or returns the number of elements in an array.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="length()">fruits.length</button>
+        <p id="demo17"></p>
+        <!--map()-->
+        <h3>18.map()</h3>
+        <p>map() creates a new array from calling a function for every array element. <br>
+            map() calls a function once for each element in an array.</p>
+        <p>const numbers = [4, 9, 16, 25];</p>
+        <button class="btn btn-success" onclick="map()">numbers.map(Math.sqrt)</button>
+        <p id="demo18"></p>
+        <!--pop()-->
+        <h3>19.pop()</h3>
+        <p>The pop() method removes (pops) the last element of an array.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="pop()">fruits.pop()</button>
+        <p id="demo19"></p>
+        <!--push()-->
+        <h3>20.push()</h3>
+        <p>The push() method adds new items to the end of an array.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="push()">fruits.push("Kiwi")</button>
+        <p id="demo20"></p>
+        <!--reverse()-->
+        <h3>21.reverse()</h3>
+        <p>The reverse() method reverses the order of the elements in an array.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="reverse()">fruits.reverse()</button>
+        <p id="demo21"></p>
+        <!--shift()-->
+        <h3>22.shift()</h3>
+        <p>The shift() method removes the first item of an array.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="shift()">fruits.shift()</button>
+        <p id="demo22"></p>
+        <!--slice()-->
+        <h3>23.slice()</h3>
+        <p>Array.slice() returns selected array elements as a new array:</p>
+        <p>const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="slice()">fruits.slice(1,3)</button>
+        <p id="demo23"></p>
+        <!--sort()-->
+        <h3>24.sort()</h3>
+        <p>The sort() sorts the elements of an array.</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <button class="btn btn-success" onclick="sort()">fruits.sort()</button>
+        <p id="demo24"></p>
+         <!--splice()-->
+         <h3>25.splice()</h3>
+         <p>The splice() method adds and/or removes array elements.</p>
+         <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+         <p>fruits.splice(2, 0, "Lemon", "Kiwi");</p>
+         <button class="btn btn-success" onclick="spliceadd()">Add element</button>
+         <p id="demo25"></p>
+         <p>const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];</p>
+         <p>fruits.splice(2, 2);</p>
+         <button class="btn btn-success" onclick="spliceremove()">Remove element</button>
+         <p id="demo26"></p>
+         <!--tostring()-->
+         <h3>26.toString()</h3>
+         <p>The toString() method returns a string with array values separated by commas.</p>
+         <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+         <button class="btn btn-success" onclick="tostring()">click</button>
+         <p id="demo27"></p>
+         <!--unshift()-->
+         <h3>27.unshift()</h3>
+         <p>unshift() adds new items to the beginning of an array:</p>
+         <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+         <p>fruits.unshift("Lemon", "Pineapple");</p>
+         <button class="btn btn-success" onclick="unshift()">click</button>
+         <p id="demo28"></p>
+         <!--valueof()-->
+         <h3>29.valueOf()</h3>
+         <p>valueOf() returns the array itself:</p>
+         <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+         <p>const myArray = fruits.valueOf();</p>
+         <button class="btn btn-success" onclick="valueof()">myArray</button>
+         <p id="demo29"></p>
+    </div>
+
+
+    <script>
+        function concat() {
+            const arr1 = ["Cecilie", "Lone"];
+            const arr2 = ["Emil", "Tobias", "Linus"];
+
+            const children = arr1.concat(arr2);
+            document.getElementById("demo1").innerHTML = children;
+        }
+        function copywithin() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+            document.getElementById("demo2").innerHTML = fruits.copyWithin(2, 0);
+        }
+        function entries() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            const f = fruits.entries();
+
+            for (let x of f) {
+                document.getElementById("demo3").innerHTML += x + "<br>";
+            }
+        }
+        function every() {
+            const ages = [32, 33, 16, 40];
+            document.getElementById("demo4").innerHTML = ages.every(checkAge);
+
+            function checkAge(age) {
+                return age > 18;
+            }
+        }
+        function fill() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo5").innerHTML = fruits.fill("Kiwi");
+        }
+        function filter() {
+            const ages = [32, 33, 16, 40];
+            document.getElementById("demo6").innerHTML = ages.filter(checkAdult);
+            function checkAdult(age) {
+                return age >= 18;
+            }
+        }
+        function find() {
+            const ages = [3, 19, 18, 20];
+            document.getElementById("demo7").innerHTML = ages.find(checkAge);
+            function checkAge(age) {
+                return age > 18;
+            }
+        }
+        function findindex() {
+            const ages = [3, 19, 18, 20];
+            document.getElementById("demo8").innerHTML = ages.findIndex(checkAge);
+            function checkAge(age) {
+                return age > 18;
+            }
+        }
+        function foreach() {
+            const numbers = [3, 19, 18, 20];
+            numbers.forEach(myFunction)
+            document.getElementById("demo9").innerHTML = numbers;
+            function myFunction(item, index, arr) {
+                arr[index] = item * 10;
+            }
+        }
+        function formarray() {
+            let text = "ABCDEFG"
+            const myArr = Array.from(text);
+            document.getElementById("demo10").innerHTML = myArr;
+        }
+        function includes() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo11").innerHTML = fruits.includes("Mango");
+        }
+        function indexof() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let index = fruits.indexOf("Apple");
+
+            document.getElementById("demo12").innerHTML = index;
+        }
+        function isarray() {
+            let text = "W3Schools";
+            let result = Array.isArray(text);
+            document.getElementById("demo13").innerHTML = result;
+        }
+        function join() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let text = fruits.join();
+
+            document.getElementById("demo14").innerHTML = text;
+        }
+        function keys() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            const key = fruits.keys();
+            let text = "";
+            for (let x of key) {
+                text += x + "<br>";
+            }
+            document.getElementById("demo15").innerHTML = text;
+        }
+        function lastindex() {
+            const fruits = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple"];
+            let index = fruits.lastIndexOf("Apple");
+            document.getElementById("demo16").innerHTML = index;
+        }
+        function length() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let length = fruits.length;
+            document.getElementById("demo17").innerHTML = length;
+        }
+        function map() {
+            const numbers = [4, 9, 16, 25];
+            document.getElementById("demo18").innerHTML = numbers.map(Math.sqrt);
+        }
+        function pop(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+document.getElementById("demo19").innerHTML = fruits;
+        }
+        function push(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+document.getElementById("demo20").innerHTML = fruits;
+        }
+        function reverse(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo21").innerHTML = fruits.reverse();
+        }
+        function shift(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+document.getElementById("demo22").innerHTML = fruits;
+        }
+        function slice(){
+            const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+document.getElementById("demo23").innerHTML = citrus;
+        }
+        function sort(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo24").innerHTML = fruits.sort();
+        }
+        function spliceadd(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+document.getElementById("demo25").innerHTML = fruits;
+        }
+        function spliceremove(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+fruits.splice(2, 2);
+document.getElementById("demo26").innerHTML = fruits;
+        }
+        function tostring(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruits.toString();
+document.getElementById("demo27").innerHTML = text;
+        }
+        function unshift(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon", "Pineapple");
+document.getElementById("demo28").innerHTML = fruits;
+        }
+        function valueof(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const myArray = fruits.valueOf();
+document.getElementById("demo29").innerHTML = myArray;
+        }
+    </script>
+</body>
+
+</html>
